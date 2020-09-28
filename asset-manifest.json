@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/BulletTime/static/css/main.76020693.chunk.css",
+    "main.js": "/BulletTime/static/js/main.6d470d05.chunk.js",
+    "main.js.map": "/BulletTime/static/js/main.6d470d05.chunk.js.map",
+    "runtime-main.js": "/BulletTime/static/js/runtime-main.dc5ad025.js",
+    "runtime-main.js.map": "/BulletTime/static/js/runtime-main.dc5ad025.js.map",
+    "static/js/2.305da961.chunk.js": "/BulletTime/static/js/2.305da961.chunk.js",
+    "static/js/2.305da961.chunk.js.map": "/BulletTime/static/js/2.305da961.chunk.js.map",
+    "index.html": "/BulletTime/index.html",
+    "precache-manifest.9ff91ac6a97c69f0b4ed974619a7b242.js": "/BulletTime/precache-manifest.9ff91ac6a97c69f0b4ed974619a7b242.js",
+    "service-worker.js": "/BulletTime/service-worker.js",
+    "static/css/main.76020693.chunk.css.map": "/BulletTime/static/css/main.76020693.chunk.css.map",
+    "static/js/2.305da961.chunk.js.LICENSE.txt": "/BulletTime/static/js/2.305da961.chunk.js.LICENSE.txt",
+    "static/js/sql-wasm.wasm": "/BulletTime/static/js/sql-wasm.wasm",
+    "static/media/acronyms.sqlite": "/BulletTime/static/media/acronyms.74aea95b.sqlite",
+    "static/media/header.jpg": "/BulletTime/static/media/header.7b6f2411.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dc5ad025.js",
+    "static/js/2.305da961.chunk.js",
+    "static/css/main.76020693.chunk.css",
+    "static/js/main.6d470d05.chunk.js"
+  ]
+}
