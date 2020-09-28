@@ -1,0 +1,10 @@
+.ruler {
+    font-family: Times New Roman;
+    font-size: 16px;
+    border: none;
+    position: absolute;
+    height: auto;
+    width: auto;
+    white-space: pre;
+    visibility: hidden;
+}

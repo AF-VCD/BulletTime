@@ -1,0 +1,76 @@
+.hwt-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden !important;
+    width: 100%;
+    -webkit-text-size-adjust: none !important;
+}
+
+.hwt-backdrop {
+    position: absolute !important;
+    top: 0 !important;
+    right: -99px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background-color: transparent;
+    padding-right: 99px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    pointer-events: none;
+}
+
+.hwt-highlights {
+    width: auto !important;
+    height: auto !important;
+    border-color: transparent !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    color: transparent !important;
+    overflow: hidden !important;
+}
+
+.hwt-input {
+    display: block !important;
+    position: relative !important;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    font: inherit;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    //visibility: hidden;
+}
+
+.hwt-content {
+    font-family: Times New Roman;
+    font-size: 16px;
+    display: block;
+    resize: none;
+    border: none;
+    width: 100%;
+    min-width: 763px;
+    outline: none;
+    //background: none transparent !important;
+}
+
+.hwt-content .mark {
+    padding: 0 !important;
+    color: black;
+    background-color: #b2ff59;
+    border-radius: 2px;
+    pointer-events: auto;
+}
+
+.mark:hover{
+    background-color: ;
+}
+
+
+.disabled {
+    background-color: #f2f2f2
+}
+
+
+.click-through {
+    pointer-events: none;
+}

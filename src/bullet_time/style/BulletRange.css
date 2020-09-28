@@ -1,0 +1,54 @@
+.guided-range {
+    position: relative;
+}
+
+.bullet-range {
+    font-family: Times New Roman;
+    font-size: 16px;
+    position: relative;
+    overflow: auto;
+    min-width: 763px;
+    height: 200px;
+    padding: 4px;
+    display: flex;
+    flex-direction:column;
+}
+
+.bullet-range #editable {
+    outline: none;
+}
+
+.bullet-range #tail {
+    flex: 1;
+    color: LightGray;
+    cursor: text;
+    transition: 0.2s;
+}
+
+.bullet-range #tail:hover {
+    color: Gray;
+}
+
+.disabled #tail {
+    transition: 0s;
+    visibility:hidden
+}
+
+.disabled {
+    background-color: #f2f2f2
+}
+
+.acronym {
+    color: black;
+    background-color: #d7ff86;
+    border-radius: 2px;
+}
+
+.acronym:hover{
+    background-color: #b2ff59;
+    cursor: context-menu;
+}
+
+.bullet-block div{
+    display: inline-block;
+}

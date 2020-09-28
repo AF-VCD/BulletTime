@@ -1,0 +1,10 @@
+.guide {
+    border: none;
+    border-right: dashed 1px grey;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: 4px;
+    pointer-events: none;
+}
