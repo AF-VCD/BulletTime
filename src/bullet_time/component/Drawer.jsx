@@ -8,6 +8,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Description from '@material-ui/icons/Description';
+import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles({
   list: {
@@ -27,6 +28,13 @@ export default function TemporaryDrawer(props) {
       onKeyDown={props.toggleDrawer(false)}
     >
       <List>
+        <ListItem
+          button
+          onClick={props.viewAbout}
+        >
+          <ListItemIcon><InfoIcon /></ListItemIcon>
+          <ListItemText primary='About' />
+        </ListItem>
         <ListItem
           button
           component="a"

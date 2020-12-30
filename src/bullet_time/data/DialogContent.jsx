@@ -21,6 +21,11 @@ export const About = () => {
           Bullet Time includes a thesaurus component powered by the <a href="https://www.datamuse.com/api/" target="_blank" rel="noopener noreferrer">Datamuse</a> API. Results are displayed based on datamuse's scoring algorithm. Unfortunately, the score given to each word isn't particularly meaningful for anything but ranking relevance. Clicking on a result will make it the new search term, allowing you to quickly find the right word for whatever you want your bullet to say.
           <h4>Auto-Save Option</h4>
           Bullet Time includes an auto-save feature. This will allow you to retain bullets and trim settings in between sessions, so long as you don't clear your browser's cache.
+        <Typography gutterBottom>
+          <h4>Shareable Link</h4>
+          Bullet Time now supports base64 encoded query parameters allowing you to easily share bullets with collaborators. Simply click the respective button, and an encoded link will be copied to your clipboard.
+        </Typography>
+          
       </Typography>
     </>
   );

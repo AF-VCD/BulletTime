@@ -18,6 +18,9 @@ import AcronymList from './data/acronyms.sqlite';
 // Style
 import './App.css';
 
+// Logic
+import { copyTextToClipboard, getJsonFromUrl } from './logic/Utils.js';
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -37,16 +40,29 @@ export default class BulletTime extends React.Component {
   constructor(props) {
     super(props);
 
-    let guide = localStorage.getItem('guide');
+    let params = getJsonFromUrl();
+
+    let guide = undefined;
+    if ("guide" in params){
+      guide = params["guide"];
+    }else{
+      guide = localStorage.getItem('guide');
+    }
     if(!guide){
       guide = this.GUIDE_DEFAULT;
     }
 
-    let autosave = Boolean(localStorage.getItem('autosave'));
-
-    let bullets = JSON.parse(localStorage.getItem('bullets'));
+    let autosave = false;
+    let bullets = undefined;
+    if ("bullets" in params){
+      bullets = JSON.parse(decodeURIComponent(atob(params['bullets'])));
+    }else{
+      autosave = Boolean(localStorage.getItem('autosave'));
+      bullets = JSON.parse(localStorage.getItem('bullets'));
+    }
     if(!bullets){bullets='';};
     let content = ContentState.createFromText(bullets);
+
     
     this.state = {
       acronymDb: null,
@@ -104,6 +120,13 @@ export default class BulletTime extends React.Component {
     }
   }
 
+  getShareableLink() {
+    let origin = window.location.origin;
+    const bullets = this.state.editorState.getCurrentContent().getPlainText();
+    let params = "?guide=" + this.state.guide + "&bullets=" + btoa(encodeURIComponent(JSON.stringify(bullets)));
+    return(copyTextToClipboard(origin+params));
+  }
+  
   handleAutosave() {
     const autosave = this.state.autosave;
     this.setState({autosave: !autosave}, this.saveState);
@@ -152,6 +175,7 @@ export default class BulletTime extends React.Component {
             <AppBar
               autosave={this.state.autosave}
               handleAutosave={() => this.handleAutosave()}
+              getShareableLink = {() => this.getShareableLink()}
             />
           </Grid>
           <Grid item>
