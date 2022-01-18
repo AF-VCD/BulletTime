@@ -1,5 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 export const About = () => {
   const title = "About Bullet Time";
@@ -62,6 +63,24 @@ export const License = () => {
       </Typography>
     </>
   );
+};
+
+  export const Warning = () => {
+    const title = "WARNING";
+    const content = (
+      <>
+        <Typography gutterBottom>
+          I have been made aware that the acronym replacement feature is not working on
+          AFNET computers. I am trying to track down the exact cause and a work around.
+          In the mean time, if you absolutely must have some kind of acronym replacement,
+          consider trying out the&nbsp;
+          <Link href="https://www.lightningwithinfive.com/AFBS" color="blue">
+           Air Force Bullet Shaping and Iteration Tool
+          </Link>
+          .
+        </Typography>
+      </>
+    );
 
   return [title, content];
 };

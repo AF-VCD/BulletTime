@@ -16,7 +16,7 @@ import Drawer from './Drawer';
 import PageDialog from './PageDialog';
 import StateSaver from './StateSaver';
 
-import { About, License } from '../data/DialogContent';
+import { About, License, Warning } from '../data/DialogContent';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,8 +33,8 @@ const useStyles = makeStyles((theme) => ({
 export default function ButtonAppBar(props) {
   const classes = useStyles();
   const [state, setState] = React.useState({open_drawer: false});
-  const [dialogOpen, setDialogOpen] = React.useState(false);
-  const [dialog, setDialog] = React.useState(About());
+  const [dialogOpen, setDialogOpen] = React.useState(true);
+  const [dialog, setDialog] = React.useState(Warning());
   const [snackOpen, setSnackOpen] = React.useState(false);
 
   const toggleDrawer = (open) => (event) => {
